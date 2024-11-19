@@ -1,33 +1,42 @@
 {
-  "version": "2.0.0",
-  "tasks": [
-    {
-      "label": "build",
-      "type": "shell",
-      "command": "cmake --build .",
-      "group": "build",
-      "problemMatcher": [],
-      "detail": "Generated task for CMake build"
-    },
-    {
-      "label": "build and run",
-      "type": "shell",
-      "command": "cmake --build . && ./NaiveBayes",
-      "group": "build",
-      "problemMatcher": [],
-      "detail": "Build and run the project"
-    },
-    {
-      "type": "cmake",
-      "label": "CMake: build",
-      "command": "build",
-      "targets": [""],
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      },
-      "problemMatcher": [],
-      "detail": "CMake template build task"
-    }
-  ]
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Configure (Linux)",
+            "type": "shell",
+            "command": "cmake",
+            "args": ["-S", ".", "-B", "build"],
+            "group": "build",
+            "problemMatcher": [],
+            "detail": "Run CMake to configure the project"
+        },
+        {
+            "label": "Build (Linux)",
+            "type": "shell",
+            "command": "cmake --build build",
+            "group": "build",
+            "problemMatcher": [],
+            "detail": "Build the project"
+        },
+        {
+            "label": "Build and Run (Linux)",
+            "type": "shell",
+            "command": "cmake --build build && ./build/bin/svm_ml_inC",
+            "group": "build",
+            "problemMatcher": [],
+            "detail": "Build and run the project"
+        },
+        {
+            "type": "cmake",
+            "label": "CMake: build",
+            "command": "build",
+            "targets": [""],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [],
+            "detail": "CMake template build task"
+        }
+    ]
 }

@@ -2,10 +2,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Run svm_ml_inC",
+            "name": "Debug NaiveBayes",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/bin/svm_ml_inC",
+            "program": "${workspaceFolder}/build/NaiveBayes",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
@@ -20,7 +20,14 @@
                 }
             ],
             "miDebuggerPath": "/usr/bin/gdb",
-            "preLaunchTask": "Build (Linux)"  // This should be Build (Linux)
+            "preLaunchTask": "build",
+            "miDebuggerArgs": "",
+            "logging": {
+                "moduleLoad": false,
+                "trace": false,
+                "traceResponse": false,
+                "engineLogging": false
+            }
         }
     ]
 }

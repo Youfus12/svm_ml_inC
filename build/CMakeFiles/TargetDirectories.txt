@@ -1,3 +1,3 @@
-/home/x/algoproject/build/CMakeFiles/NaiveBayes.dir
-/home/x/algoproject/build/CMakeFiles/edit_cache.dir
-/home/x/algoproject/build/CMakeFiles/rebuild_cache.dir
+/home/x/algo_project/svm_ml_inC/build/CMakeFiles/svm_ml_inC.dir
+/home/x/algo_project/svm_ml_inC/build/CMakeFiles/edit_cache.dir
+/home/x/algo_project/svm_ml_inC/build/CMakeFiles/rebuild_cache.dir

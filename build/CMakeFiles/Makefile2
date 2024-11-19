@@ -54,16 +54,16 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/x/algoproject
+CMAKE_SOURCE_DIR = /home/x/algo_project/svm_ml_inC
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/x/algoproject/build
+CMAKE_BINARY_DIR = /home/x/algo_project/svm_ml_inC/build
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/NaiveBayes.dir/all
+all: CMakeFiles/svm_ml_inC.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,34 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/NaiveBayes.dir/clean
+clean: CMakeFiles/svm_ml_inC.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/NaiveBayes.dir
+# Target rules for target CMakeFiles/svm_ml_inC.dir
 
 # All Build rule for target.
-CMakeFiles/NaiveBayes.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NaiveBayes.dir/build.make CMakeFiles/NaiveBayes.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NaiveBayes.dir/build.make CMakeFiles/NaiveBayes.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/x/algoproject/build/CMakeFiles --progress-num=1,2,3,4 "Built target NaiveBayes"
-.PHONY : CMakeFiles/NaiveBayes.dir/all
+CMakeFiles/svm_ml_inC.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/svm_ml_inC.dir/build.make CMakeFiles/svm_ml_inC.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/svm_ml_inC.dir/build.make CMakeFiles/svm_ml_inC.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/x/algo_project/svm_ml_inC/build/CMakeFiles --progress-num=1,2,3,4 "Built target svm_ml_inC"
+.PHONY : CMakeFiles/svm_ml_inC.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/NaiveBayes.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/x/algoproject/build/CMakeFiles 4
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/NaiveBayes.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/x/algoproject/build/CMakeFiles 0
-.PHONY : CMakeFiles/NaiveBayes.dir/rule
+CMakeFiles/svm_ml_inC.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/x/algo_project/svm_ml_inC/build/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/svm_ml_inC.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/x/algo_project/svm_ml_inC/build/CMakeFiles 0
+.PHONY : CMakeFiles/svm_ml_inC.dir/rule
 
 # Convenience name for target.
-NaiveBayes: CMakeFiles/NaiveBayes.dir/rule
-.PHONY : NaiveBayes
+svm_ml_inC: CMakeFiles/svm_ml_inC.dir/rule
+.PHONY : svm_ml_inC
 
 # clean rule for target.
-CMakeFiles/NaiveBayes.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NaiveBayes.dir/build.make CMakeFiles/NaiveBayes.dir/clean
-.PHONY : CMakeFiles/NaiveBayes.dir/clean
+CMakeFiles/svm_ml_inC.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/svm_ml_inC.dir/build.make CMakeFiles/svm_ml_inC.dir/clean
+.PHONY : CMakeFiles/svm_ml_inC.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

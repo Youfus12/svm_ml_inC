@@ -1,0 +1,1 @@
+/usr/bin/cc  -Wall -g -g  -L/usr/lib/x86_64-linux-gnu CMakeFiles/svm_ml_inC.dir/src/main.c.o CMakeFiles/svm_ml_inC.dir/src/ali_hamo.c.o CMakeFiles/svm_ml_inC.dir/src/fadel_abderrahmen.c.o -o bin/svm_ml_inC  -lSDL2 

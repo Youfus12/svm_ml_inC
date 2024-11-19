@@ -1,4 +1,4 @@
-# Install script for directory: /home/x/algoproject
+# Install script for directory: /home/x/algo_project/svm_ml_inC
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/x/algoproject/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/x/algo_project/svm_ml_inC/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = 
 
-C_INCLUDES = -I/home/x/algoproject/include -isystem /usr/include/SDL2
+C_INCLUDES = -I/usr/include/SDL2
 
-C_FLAGS = -g -std=gnu11
+C_FLAGS =  -Wall -g -g -std=gnu11
 

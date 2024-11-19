@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/x/algoproject
+CMAKE_SOURCE_DIR = /home/x/algo_project/svm_ml_inC
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/x/algoproject/build
+CMAKE_BINARY_DIR = /home/x/algo_project/svm_ml_inC/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/x/algoproject/build/CMakeFiles /home/x/algoproject/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/x/algo_project/svm_ml_inC/build/CMakeFiles /home/x/algo_project/svm_ml_inC/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/x/algoproject/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/x/algo_project/svm_ml_inC/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named NaiveBayes
+# Target rules for targets named svm_ml_inC
 
 # Build rule for target.
-NaiveBayes: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 NaiveBayes
-.PHONY : NaiveBayes
+svm_ml_inC: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 svm_ml_inC
+.PHONY : svm_ml_inC
 
 # fast build rule for target.
-NaiveBayes/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NaiveBayes.dir/build.make CMakeFiles/NaiveBayes.dir/build
-.PHONY : NaiveBayes/fast
+svm_ml_inC/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/svm_ml_inC.dir/build.make CMakeFiles/svm_ml_inC.dir/build
+.PHONY : svm_ml_inC/fast
 
 src/ali_hamo.o: src/ali_hamo.c.o
 .PHONY : src/ali_hamo.o
 
 # target to build an object file
 src/ali_hamo.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NaiveBayes.dir/build.make CMakeFiles/NaiveBayes.dir/src/ali_hamo.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/svm_ml_inC.dir/build.make CMakeFiles/svm_ml_inC.dir/src/ali_hamo.c.o
 .PHONY : src/ali_hamo.c.o
 
 src/ali_hamo.i: src/ali_hamo.c.i
@@ -142,7 +142,7 @@ src/ali_hamo.i: src/ali_hamo.c.i
 
 # target to preprocess a source file
 src/ali_hamo.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NaiveBayes.dir/build.make CMakeFiles/NaiveBayes.dir/src/ali_hamo.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/svm_ml_inC.dir/build.make CMakeFiles/svm_ml_inC.dir/src/ali_hamo.c.i
 .PHONY : src/ali_hamo.c.i
 
 src/ali_hamo.s: src/ali_hamo.c.s
@@ -150,7 +150,7 @@ src/ali_hamo.s: src/ali_hamo.c.s
 
 # target to generate assembly for a file
 src/ali_hamo.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NaiveBayes.dir/build.make CMakeFiles/NaiveBayes.dir/src/ali_hamo.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/svm_ml_inC.dir/build.make CMakeFiles/svm_ml_inC.dir/src/ali_hamo.c.s
 .PHONY : src/ali_hamo.c.s
 
 src/fadel_abderrahmen.o: src/fadel_abderrahmen.c.o
@@ -158,7 +158,7 @@ src/fadel_abderrahmen.o: src/fadel_abderrahmen.c.o
 
 # target to build an object file
 src/fadel_abderrahmen.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NaiveBayes.dir/build.make CMakeFiles/NaiveBayes.dir/src/fadel_abderrahmen.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/svm_ml_inC.dir/build.make CMakeFiles/svm_ml_inC.dir/src/fadel_abderrahmen.c.o
 .PHONY : src/fadel_abderrahmen.c.o
 
 src/fadel_abderrahmen.i: src/fadel_abderrahmen.c.i
@@ -166,7 +166,7 @@ src/fadel_abderrahmen.i: src/fadel_abderrahmen.c.i
 
 # target to preprocess a source file
 src/fadel_abderrahmen.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NaiveBayes.dir/build.make CMakeFiles/NaiveBayes.dir/src/fadel_abderrahmen.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/svm_ml_inC.dir/build.make CMakeFiles/svm_ml_inC.dir/src/fadel_abderrahmen.c.i
 .PHONY : src/fadel_abderrahmen.c.i
 
 src/fadel_abderrahmen.s: src/fadel_abderrahmen.c.s
@@ -174,7 +174,7 @@ src/fadel_abderrahmen.s: src/fadel_abderrahmen.c.s
 
 # target to generate assembly for a file
 src/fadel_abderrahmen.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NaiveBayes.dir/build.make CMakeFiles/NaiveBayes.dir/src/fadel_abderrahmen.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/svm_ml_inC.dir/build.make CMakeFiles/svm_ml_inC.dir/src/fadel_abderrahmen.c.s
 .PHONY : src/fadel_abderrahmen.c.s
 
 src/main.o: src/main.c.o
@@ -182,7 +182,7 @@ src/main.o: src/main.c.o
 
 # target to build an object file
 src/main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NaiveBayes.dir/build.make CMakeFiles/NaiveBayes.dir/src/main.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/svm_ml_inC.dir/build.make CMakeFiles/svm_ml_inC.dir/src/main.c.o
 .PHONY : src/main.c.o
 
 src/main.i: src/main.c.i
@@ -190,7 +190,7 @@ src/main.i: src/main.c.i
 
 # target to preprocess a source file
 src/main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NaiveBayes.dir/build.make CMakeFiles/NaiveBayes.dir/src/main.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/svm_ml_inC.dir/build.make CMakeFiles/svm_ml_inC.dir/src/main.c.i
 .PHONY : src/main.c.i
 
 src/main.s: src/main.c.s
@@ -198,7 +198,7 @@ src/main.s: src/main.c.s
 
 # target to generate assembly for a file
 src/main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/NaiveBayes.dir/build.make CMakeFiles/NaiveBayes.dir/src/main.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/svm_ml_inC.dir/build.make CMakeFiles/svm_ml_inC.dir/src/main.c.s
 .PHONY : src/main.c.s
 
 # Help Target
@@ -209,7 +209,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... NaiveBayes"
+	@echo "... svm_ml_inC"
 	@echo "... src/ali_hamo.o"
 	@echo "... src/ali_hamo.i"
 	@echo "... src/ali_hamo.s"

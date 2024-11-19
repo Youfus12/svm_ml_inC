@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/x/algoproject/src/ali_hamo.c" "CMakeFiles/NaiveBayes.dir/src/ali_hamo.c.o" "gcc" "CMakeFiles/NaiveBayes.dir/src/ali_hamo.c.o.d"
-  "/home/x/algoproject/src/fadel_abderrahmen.c" "CMakeFiles/NaiveBayes.dir/src/fadel_abderrahmen.c.o" "gcc" "CMakeFiles/NaiveBayes.dir/src/fadel_abderrahmen.c.o.d"
-  "/home/x/algoproject/src/main.c" "CMakeFiles/NaiveBayes.dir/src/main.c.o" "gcc" "CMakeFiles/NaiveBayes.dir/src/main.c.o.d"
+  "/home/x/algo_project/svm_ml_inC/src/ali_hamo.c" "CMakeFiles/svm_ml_inC.dir/src/ali_hamo.c.o" "gcc" "CMakeFiles/svm_ml_inC.dir/src/ali_hamo.c.o.d"
+  "/home/x/algo_project/svm_ml_inC/src/fadel_abderrahmen.c" "CMakeFiles/svm_ml_inC.dir/src/fadel_abderrahmen.c.o" "gcc" "CMakeFiles/svm_ml_inC.dir/src/fadel_abderrahmen.c.o.d"
+  "/home/x/algo_project/svm_ml_inC/src/main.c" "CMakeFiles/svm_ml_inC.dir/src/main.c.o" "gcc" "CMakeFiles/svm_ml_inC.dir/src/main.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
