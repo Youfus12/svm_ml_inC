@@ -1,45 +1,38 @@
-# 📊 Support Vector Machine (SVM) Visualization in C  
+# SVM ML in C
 
-Welcome to the **Support Vector Machine (SVM) Visualization** project! This tool provides an **interactive and visual understanding** of how SVMs classify data, making complex concepts approachable and engaging.  
+This project is a simple C implementation of Support Vector Machine (SVM) for machine learning. It uses SDL2 for visualization and is set up with `CMake` for cross-platform building.
 
-![Visualization Example](assets/example-visualization.png)  
-*Example of decision boundaries and support vectors.*
+## Features
 
----
+- **Cross-platform**: Supports both Linux and Windows environments.
+- **Build and Run Automation**: Easily build and run the project with a single click in VS Code using the provided setup scripts.
 
-## ✨ Features  
+## Requirements
 
-- **Interactive Visualization**:  
-  Explore how SVM classifies data with support vectors, decision boundaries, and margins.  
-- **Cross-Platform Compatibility**:  
-  Works seamlessly on **Linux (Ubuntu)** and **Windows** environments.  
-- **Streamlined Build Process**:  
-  Pre-configured `.vscode` for automated builds on supported systems.  
+### Dependencies
 
----
+- **CMake** (for building the project)
+- **g++** (for compiling the C code)
+- **SDL2** (for graphical visualization)
+- **VS Code** (with the C++ extension installed)
 
-## 📋 Requirements  
+On Windows, you also need **Chocolatey** (for automated dependency installation via `setup.bat`).
 
-### Linux (Ubuntu)  
+### Setup Files
 
-- **CMake** (ensure it’s installed).  
-- **SDL2 library**.  
-- **g++ compiler** (or equivalent).  
+The repository contains setup scripts for both Linux and Windows to configure your development environment for easy building and running of the project:
 
-### Windows  
+- `setup.sh` for Linux
+- `setup.bat` for Windows
 
-- **Visual Studio Code** (with **C++** and **CMake** extensions).  
-- **CMake** (ensure it’s installed).  
-- **MinGW** or **Visual Studio** compiler.  
+These scripts will automatically install dependencies and configure VS Code to run the project with a single click.
 
----
+## Setup
 
-## 🚀 Getting Started  
+### Step 1: Clone the Repository
 
-### 1️⃣ Clone the Repository  
-
-Run the following commands to clone and navigate to the project directory:  
+Clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/Youfus12/svm_ml_inC.git
-cd svm_ml_inC
+git clone <your-repo-url>
+cd <your-repo-folder>
