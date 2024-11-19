@@ -1,0 +1,33 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build",
+      "type": "shell",
+      "command": "cmake --build .",
+      "group": "build",
+      "problemMatcher": [],
+      "detail": "Generated task for CMake build"
+    },
+    {
+      "label": "build and run",
+      "type": "shell",
+      "command": "cmake --build . && ./NaiveBayes",
+      "group": "build",
+      "problemMatcher": [],
+      "detail": "Build and run the project"
+    },
+    {
+      "type": "cmake",
+      "label": "CMake: build",
+      "command": "build",
+      "targets": [""],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": [],
+      "detail": "CMake template build task"
+    }
+  ]
+}

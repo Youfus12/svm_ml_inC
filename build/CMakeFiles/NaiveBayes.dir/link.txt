@@ -1,0 +1,1 @@
+/usr/bin/cc -g CMakeFiles/NaiveBayes.dir/src/main.c.o CMakeFiles/NaiveBayes.dir/src/ali_hamo.c.o CMakeFiles/NaiveBayes.dir/src/fadel_abderrahmen.c.o -o NaiveBayes  /usr/lib/x86_64-linux-gnu/libSDL2.so 
