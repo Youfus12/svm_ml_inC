@@ -1,38 +1,45 @@
-# Naive Bayes Visualization
+# 📊 Support Vector Machine (SVM) Visualization in C  
 
-This project provides a visualization of the Naive Bayes classifier algorithm. It uses C and the SDL library to visualize the classification process, making it easier to understand how Naive Bayes works.
+Welcome to the **Support Vector Machine (SVM) Visualization** project! This tool provides an **interactive and visual understanding** of how SVMs classify data, making complex concepts approachable and engaging.  
 
-## Features
+![Visualization Example](assets/example-visualization.png)  
+*Example of decision boundaries and support vectors.*
 
-- Visual representation of Naive Bayes classification.
-- Supports both Linux (Ubuntu) and Windows environments.
-- Configured with CMake for easy build and configuration.
+---
 
-## Requirements
+## ✨ Features  
 
-### For Linux:
+- **Interactive Visualization**:  
+  Explore how SVM classifies data with support vectors, decision boundaries, and margins.  
+- **Cross-Platform Compatibility**:  
+  Works seamlessly on **Linux (Ubuntu)** and **Windows** environments.  
+- **Streamlined Build Process**:  
+  Pre-configured `.vscode` for automated builds on supported systems.  
 
-- Ubuntu or other Linux-based operating systems.
-- CMake (installed on your system).
-- SDL2 library.
-- g++ compiler (or equivalent).
+---
 
-### For Windows:
+## 📋 Requirements  
 
-- Visual Studio Code (with C++ and CMake extensions).
-- CMake (installed on your system).
-- MinGW or Visual Studio for compiling the project.
+### Linux (Ubuntu)  
 
-## Getting Started
+- **CMake** (ensure it’s installed).  
+- **SDL2 library**.  
+- **g++ compiler** (or equivalent).  
 
-### Cloning the Repository
+### Windows  
 
-To clone this repository, run the following command:
+- **Visual Studio Code** (with **C++** and **CMake** extensions).  
+- **CMake** (ensure it’s installed).  
+- **MinGW** or **Visual Studio** compiler.  
+
+---
+
+## 🚀 Getting Started  
+
+### 1️⃣ Clone the Repository  
+
+Run the following commands to clone and navigate to the project directory:  
 
 ```bash
-git clone https://github.com/Abderrahmen-Selatnia/naive-bayes-visiualisation.git
-cd naive-bayes-visiualisation
-
-
-### then you need to confegure the tasks.jason and lanch.jason on your vs code
-```
+git clone https://github.com/Youfus12/svm_ml_inC.git
+cd svm_ml_inC
