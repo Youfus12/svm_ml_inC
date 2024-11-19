@@ -25,18 +25,6 @@
             "group": "build",
             "problemMatcher": [],
             "detail": "Build and run the project"
-        },
-        {
-            "type": "cmake",
-            "label": "CMake: build",
-            "command": "build",
-            "targets": [""],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
-            "problemMatcher": [],
-            "detail": "CMake template build task"
         }
     ]
 }

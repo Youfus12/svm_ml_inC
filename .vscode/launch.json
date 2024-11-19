@@ -20,7 +20,7 @@
                 }
             ],
             "miDebuggerPath": "/usr/bin/gdb",
-            "preLaunchTask": "Build (Linux)"  // This should be Build (Linux)
+            "preLaunchTask": "Build (Linux)"
         }
     ]
 }

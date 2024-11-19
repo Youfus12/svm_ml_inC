@@ -1,7 +1,37 @@
 #!/bin/bash
 
-# Set up the VS Code project configurations for Linux
-echo "Setting up VS Code configurations for Linux..."
+# Step 1: Check and install necessary dependencies (CMake, g++)
+echo "Checking for necessary dependencies..."
+
+# Update package lists
+sudo apt update
+
+# Install required dependencies if not already installed
+if ! command -v cmake &> /dev/null
+then
+    echo "CMake not found, installing..."
+    sudo apt install cmake -y
+fi
+
+if ! command -v g++ &> /dev/null
+then
+    echo "g++ not found, installing..."
+    sudo apt install g++ -y
+fi
+
+if ! command -v pkg-config &> /dev/null
+then
+    echo "pkg-config not found, installing..."
+    sudo apt install pkg-config -y
+fi
+
+if ! pkg-config --exists sdl2; then
+  echo "SDL2 not found. Installing SDL2..."
+  sudo apt install libsdl2-dev -y
+fi
+
+# Step 2: Create necessary VS Code configuration files
+echo "Creating VS Code configuration files..."
 
 # Create .vscode directory if it doesn't exist
 mkdir -p .vscode
@@ -12,29 +42,41 @@ cat <<EOL > .vscode/tasks.json
     "version": "2.0.0",
     "tasks": [
         {
+            "label": "Configure (Linux)",
+            "type": "shell",
+            "command": "cmake",
+            "args": ["-S", ".", "-B", "build"],
+            "group": "build",
+            "problemMatcher": [],
+            "detail": "Run CMake to configure the project"
+        },
+        {
             "label": "Build (Linux)",
             "type": "shell",
-            "command": "make",
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
-            "problemMatcher": "$gcc",
-            "presentation": {
-                "reveal": "silent"
-            }
+            "command": "cmake --build build",
+            "group": "build",
+            "problemMatcher": [],
+            "detail": "Build the project"
+        },
+        {
+            "label": "Build and Run (Linux)",
+            "type": "shell",
+            "command": "cmake --build build && ./build/bin/svm_ml_inC",
+            "group": "build",
+            "problemMatcher": [],
+            "detail": "Build and run the project"
         }
     ]
 }
 EOL
 
-# Create launch.json for debugging
+# Create launch.json
 cat <<EOL > .vscode/launch.json
 {
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Launch (Linux)",
+            "name": "Run svm_ml_inC",
             "type": "cppdbg",
             "request": "launch",
             "program": "\${workspaceFolder}/build/bin/svm_ml_inC",
@@ -42,7 +84,7 @@ cat <<EOL > .vscode/launch.json
             "stopAtEntry": false,
             "cwd": "\${workspaceFolder}",
             "environment": [],
-            "externalConsole": true,
+            "externalConsole": false,
             "MIMode": "gdb",
             "setupCommands": [
                 {
@@ -58,5 +100,9 @@ cat <<EOL > .vscode/launch.json
 }
 EOL
 
-echo "VS Code configuration completed for Linux!"
-echo "You can now open the project in VS Code, build it with 'Ctrl+Shift+B' and run it with the 'Run' button."
+# Step 3: Create the build directory and configure the project using cmake
+echo "Running cmake to configure the project..."
+mkdir -p build
+cmake -S . -B build
+
+echo "Setup complete! You can now open the project in VS Code and run it by pressing the Run button."

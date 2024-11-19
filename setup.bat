@@ -1,46 +1,75 @@
 @echo off
 
-:: Check if MinGW is installed
-where gcc >nul 2>nul
+REM Step 1: Check and install necessary dependencies (CMake, g++)
+echo Checking for necessary dependencies...
+
+REM Install Chocolatey if not already installed (ensure the user has admin privileges)
+where cmake > nul 2>&1
 if %ERRORLEVEL% NEQ 0 (
-    echo MinGW not found. Please install MinGW and add it to your PATH.
-    exit /b 1
+    echo CMake not found. Installing CMake...
+    choco install cmake -y
 )
 
-:: Create the build directory if it doesn't exist
-if exist "build" (
-    echo Build directory already exists. Cleaning up...
-    rmdir /s /q build
+where g++ > nul 2>&1
+if %ERRORLEVEL% NEQ 0 (
+    echo g++ not found. Installing g++...
+    choco install mingw -y
 )
-mkdir build
-cd build
 
-:: Run CMake to configure the project
-echo Running CMake...
-cmake ..
+REM Check if SDL2 is installed (via Chocolatey)
+choco list --local-only | findstr /C:"libsdl2" > nul
+if %ERRORLEVEL% NEQ 0 (
+    echo SDL2 not found. Installing SDL2...
+    choco install libsdl2 -y
+)
 
-:: Build the project
-echo Building the project...
-mingw32-make
-
-:: Notify the user that the build is complete
-echo Build complete. Run 'build\\NaiveBayes.exe' to start.
-
-:: Generate settings for Windows
-echo Generated settings for Windows.
-
-:: Create VS Code configuration files
+REM Step 2: Create necessary VS Code configuration files
 echo Creating VS Code configuration files...
 
-mkdir .vscode
+REM Create .vscode directory if it doesn't exist
+if not exist ".vscode" mkdir .vscode
+
+REM Create tasks.json
+echo {
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Configure (Windows)",
+            "type": "shell",
+            "command": "cmake",
+            "args": ["-S", ".", "-B", "build"],
+            "group": "build",
+            "problemMatcher": [],
+            "detail": "Run CMake to configure the project"
+        },
+        {
+            "label": "Build (Windows)",
+            "type": "shell",
+            "command": "cmake --build build",
+            "group": "build",
+            "problemMatcher": [],
+            "detail": "Build the project"
+        },
+        {
+            "label": "Build and Run (Windows)",
+            "type": "shell",
+            "command": "cmake --build build && ./build/bin/svm_ml_inC.exe",
+            "group": "build",
+            "problemMatcher": [],
+            "detail": "Build and run the project"
+        }
+    ]
+} > .vscode\tasks.json
+
+REM Create launch.json
 echo {
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Debug NaiveBayes",
+            "name": "Run svm_ml_inC",
             "type": "cppdbg",
             "request": "launch",
-            "program": "\${workspaceFolder}\\build\\NaiveBayes.exe",
+            "program": "\${workspaceFolder}\\build\\bin\\svm_ml_inC.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "\${workspaceFolder}",
@@ -54,34 +83,16 @@ echo {
                     "ignoreFailures": true
                 }
             ],
-            "miDebuggerPath": "C:\\mingw\\bin\\gdb.exe",
-            "preLaunchTask": "build",
-            "miDebuggerArgs": "",
-            "logging": {
-                "moduleLoad": false,
-                "trace": false,
-                "traceResponse": false,
-                "engineLogging": false
-            }
+            "miDebuggerPath": "C:\\MinGW\\bin\\gdb.exe",
+            "preLaunchTask": "Build (Windows)"
         }
     ]
 } > .vscode\launch.json
 
-echo {
-    "version": "2.0.0",
-    "tasks": [
-        {
-            "label": "build",
-            "type": "shell",
-            "command": "mingw32-make",
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
-            "problemMatcher": ["\$gcc"],
-            "detail": "Generated task for building the project"
-        }
-    ]
-} > .vscode\tasks.json
+REM Step 3: Create the build directory and configure the project using cmake
+echo Running cmake to configure the project...
+mkdir build
+cmake -S . -B build
 
-echo VS Code configuration files created successfully.
+echo Setup complete! You can now open the project in VS Code and run it by pressing the Run button.
+pause
